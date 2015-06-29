@@ -31,7 +31,8 @@ App.controller('IniciarSesionController', function($scope, $location) {
       _ScopeContainer['MainController'].esconderHeader = false;
       
       $scope.mostrarMensaje = false;
-      $location.path('/catering-registrar');
+      var path = "/catering/app#/catering-registrar";
+      window.location.href = path;
       
     }else {
       $scope.mostrarMensaje = true;
@@ -44,7 +45,10 @@ App.controller('IniciarSesionController', function($scope, $location) {
       _ScopeContainer['MainController'].esconderHeader = false;
       
       $scope.mostrarMensaje = false;
-      $location.path('/catering-buscar');
+      $scope.mostrarMensaje = false;
+      var path = "/catering/app#/catering-buscar";
+      window.location.href = path;
+      
     }else {
       $scope.mostrarMensaje = true;
     }

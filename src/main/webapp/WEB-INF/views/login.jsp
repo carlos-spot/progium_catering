@@ -52,49 +52,17 @@
     <script src="resources/js/services.js"></script>
 
     <!--Controladores-->
-    <script src="modulos/seguridad/iniciar-sesion-controller.js"></script>
-    <script src="modulos/seguridad/usuario-registrar-controller.js"></script>
-    <script src="modulos/catering/catering-registrar-controller.js"></script>
-    <script src="modulos/catering/catering-buscar-controller.js"></script>
-    <script src="modulos/cotizacion/cotizacion-registrar-controller.js"></script>
-    <script src="modulos/producto/producto-registrar-controller.js"></script>
+    <script src="resources/modulos/seguridad/iniciar-sesion-controller.js"></script>
+    <script src="resources/modulos/seguridad/usuario-registrar-controller.js"></script>
+    <script src="resources/modulos/catering/catering-registrar-controller.js"></script>
+    <script src="resources/modulos/catering/catering-buscar-controller.js"></script>
+    <script src="resources/modulos/cotizacion/cotizacion-registrar-controller.js"></script>
+    <script src="resources/modulos/producto/producto-registrar-controller.js"></script>
 </head>
 
 <body ng-controller="MainController">
-        <!-- header -->
-        <header id="header" class="navbar" ng-hide="esconderHeader">
-            <ul class="nav navbar-nav navbar-avatar pull-right">
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="hidden-xs-only">Bienvenido! Usuario</span>
-                        <span class="thumb-small avatar inline"><img src="resources/first/src/images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
-                        <b class="caret hidden-xs-only"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="">Configuración</a></li>
-                        <li><a href="">Perfil</a></li>
-                        <li><a href=""><span class="badge bg-danger pull-right">3</span>Notificaciones</a></li>
-                        <li class="divider"></li>
-                        <li><a href="docs.html">Ayuda</a></li>
-                        <li><a href="#/iniciar-sesion">Salir</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="">Catering</a>
-            <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
-                <i class="fa fa-bars fa-lg text-default"></i>
-            </button>
-            <img src="resources/first/src/images/banner2.jpg" alt="Catering" class="imgbanner" >
-        </header>
-        <!-- / header -->
-
-        <!-- nav -->
-        <!-- Cargar el menu segun el tipo de usuario -->
-        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-hide="esconderMenu" ng-if="esAdministrador" ng-include="'modulos/compartido/menu-administrador.html'"></nav>
-        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-hide="esconderMenu" ng-if="!esAdministrador" ng-include="'modulos/compartido/menu-cliente.html'"></nav>
-        <!-- / nav -->
-
-        <!-- content -->
+        
+		<!-- content -->
         <section id="content" ng-view> 
         
         </section>

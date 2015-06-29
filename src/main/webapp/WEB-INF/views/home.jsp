@@ -52,17 +52,17 @@
     <script src="resources/js/services.js"></script>
 
     <!--Controladores-->
-    <script src="modulos/seguridad/iniciar-sesion-controller.js"></script>
-    <script src="modulos/seguridad/usuario-registrar-controller.js"></script>
-    <script src="modulos/catering/catering-registrar-controller.js"></script>
-    <script src="modulos/catering/catering-buscar-controller.js"></script>
-    <script src="modulos/cotizacion/cotizacion-registrar-controller.js"></script>
-    <script src="modulos/producto/producto-registrar-controller.js"></script>
+    <script src="resources/modulos/seguridad/iniciar-sesion-controller.js"></script>
+    <script src="resources/modulos/seguridad/usuario-registrar-controller.js"></script>
+    <script src="resources/modulos/catering/catering-registrar-controller.js"></script>
+    <script src="resources/modulos/catering/catering-buscar-controller.js"></script>
+    <script src="resources/modulos/cotizacion/cotizacion-registrar-controller.js"></script>
+    <script src="resources/modulos/producto/producto-registrar-controller.js"></script>
 </head>
 
 <body ng-controller="MainController">
         <!-- header -->
-        <header id="header" class="navbar" ng-hide="esconderHeader">
+        <header id="header" class="navbar">
             <ul class="nav navbar-nav navbar-avatar pull-right">
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -76,7 +76,7 @@
                         <li><a href=""><span class="badge bg-danger pull-right">3</span>Notificaciones</a></li>
                         <li class="divider"></li>
                         <li><a href="docs.html">Ayuda</a></li>
-                        <li><a href="#/iniciar-sesion">Salir</a></li>
+                        <li><a href="/catering/#/iniciar-sesion">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -90,8 +90,8 @@
 
         <!-- nav -->
         <!-- Cargar el menu segun el tipo de usuario -->
-        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-hide="esconderMenu" ng-if="esAdministrador" ng-include="'modulos/compartido/menu-administrador.html'"></nav>
-        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-hide="esconderMenu" ng-if="!esAdministrador" ng-include="'modulos/compartido/menu-cliente.html'"></nav>
+        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-if="esAdministrador" ng-include="'modulos/menu-administrador.html'"></nav>
+        <nav id="nav" class="nav-primary hidden-xs nav-vertical" ng-if="!esAdministrador" ng-include="'modulos/menu-cliente.html'"></nav>
         <!-- / nav -->
 
         <!-- content -->

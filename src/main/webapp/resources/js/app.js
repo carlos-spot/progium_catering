@@ -18,32 +18,32 @@ App.controller('MainController', function($scope, $route, $routeParams, $locatio
 
 App.config(function($routeProvider, $locationProvider) {
   	$routeProvider
-		.when('/iniciar-sesion', {
-			templateUrl: 'modulos/seguridad/inicio-sesion.html',
+	  	.when('/iniciar-sesion', {
+			templateUrl: 'modulos/seguridad-iniciar-sesion',
 			controller: 'IniciarSesionController'
 		})
 		.when('/usuario-registrar', {
-			templateUrl: 'modulos/seguridad/usuario-registrar.html',
+			templateUrl: 'modulos/seguridad-usuario-registrar',
 			controller: 'UsuarioRegistrarController'
 		})
 		.when('/usuario-registrar-siguiente', {
-			templateUrl: 'modulos/seguridad/usuario-registrar-2.html',
+			templateUrl: 'modulos/seguridad-usuario-registrar2',
 			controller: 'UsuarioRegistrarController'
 		})
 		.when('/catering-registrar', {
-			templateUrl: 'modulos/catering/catering-registrar.html',
+			templateUrl: 'modulos/catering-registrar',
 			controller: 'CateringRegistrarController'
 		})
 		.when('/catering-buscar', {
-			templateUrl: 'modulos/catering/catering-buscar.html',
+			templateUrl: 'modulos/catering-buscar',
 			controller: 'CateringBuscarController'
 		})
 		.when('/producto-registrar', {
-			templateUrl: 'modulos/producto/producto-registrar.html',
+			templateUrl: 'modulos/producto-registrar',
 			controller: 'ProductoRegistrarController'
 		})
 		.when('/cotizacion-registrar', {
-			templateUrl: 'modulos/cotizacion/cotizacion-registrar.html',
+			templateUrl: 'modulos/cotizacion-registrar',
 			controller: 'CotizacionRegistrarController'
 		})
 		.otherwise({

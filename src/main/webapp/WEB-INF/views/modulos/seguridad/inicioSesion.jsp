@@ -3,22 +3,22 @@
     <div class="col-lg-4 col-lg-offset-4 m-t-large">
       <section class="panel">
         <header class="panel-heading text-center">
-          Iniciar sesiÃ³n
+          Iniciar sesión
         </header>
         <form class="panel-body" method="post">
           <div class="block">
-            <label class="control-label">Correo electrÃ³nico</label>
+            <label class="control-label">Correo electrónico</label>
             <input type="email" id="email" placeholder="prueba@correo.com" class="form-control" ng-model="nombre" required>
           </div>
           <div class="block">
-            <label class="control-label">ContraseÃ±a</label>
-            <input type="password" id="inputPassword" placeholder="ContraseÃ±a" class="form-control" ng-model="contrasenna" required>
+            <label class="control-label">Contraseña</label>
+            <input type="password" id="inputPassword" placeholder="Contraseña" class="form-control" ng-model="contrasenna" required>
           </div>
-          <a ng-href="olvidoContrasenna.html" class="pull-right m-t-mini"><small>Â¿OlvidÃ³ su contraseÃ±a?</small></a>
-          <samp ng-show="mostrarMensaje">Correo o contraseÃ±a invalidos</samp>
-          <button class="btn btn-info" ng-click="iniciarSesion()">Iniciar sesiÃ³n</button>
+          <a ng-href="olvidoContrasenna.html" class="pull-right m-t-mini"><small>¿Olvidó su contraseña?</small></a>
+          <samp ng-show="mostrarMensaje">Correo o contraseña invalidos</samp>
+          <button class="btn btn-info" ng-click="iniciarSesion()">Iniciar sesión</button>
           <div class="line line-dashed"></div>
-          <p class="text-muted text-center"><small>Â¿AÃºn no tiene una cuenta?</small></p>
+          <p class="text-muted text-center"><small>¿Aún no tiene una cuenta?</small></p>
           <a ng-href="#/usuario-registrar" class="btn btn-white btn-block">Crear una cuenta</a>
         </form>
       </section>

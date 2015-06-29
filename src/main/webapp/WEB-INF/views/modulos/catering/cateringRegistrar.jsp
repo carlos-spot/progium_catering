@@ -15,31 +15,31 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-3 control-label">DirecciÃ³n</label>
+                <label class="col-lg-3 control-label">Dirección</label>
                 <div class="col-lg-8">
                   <textarea placeholder="Profile" rows="5" class="form-control" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-3 control-label">TelÃ©fono</label>
+                <label class="col-lg-3 control-label">Teléfono</label>
                 <div class="col-lg-8">
                   <input type="text" ng-model="telefono" placeholder="Telefono" data-required="true" class="form-control">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-3 control-label">TelÃ©fono Alternativo</label>
+                <label class="col-lg-3 control-label">Teléfono Alternativo</label>
                 <div class="col-lg-8">
                   <input type="text" ng-model="telefonoAlternativo" placeholder="TelefonoAlternativo" data-required="true" class="form-control">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-3 control-label">Horario de atenciÃ³n</label>
+                <label class="col-lg-3 control-label">Horario de atención</label>
                 <div class="col-lg-8">
                   <input type="text" ng-model="horarioAtencion" placeholder="HorarioAtencion" data-required="true" class="form-control">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-3 control-label">Cantidad de eventos por dÃ­a</label>
+                <label class="col-lg-3 control-label">Cantidad de eventos por día</label>
                 <div class="col-lg-8">
                   <input type="text" ng-model="cantidadEvento" placeholder="CantidadEvento" data-required="true" class="form-control">
                 </div>

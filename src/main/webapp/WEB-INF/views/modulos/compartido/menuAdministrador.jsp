@@ -7,7 +7,7 @@
     </ul>
   </li>
   <li class="dropdown-submenu">
-    <a href="#"><i class="fa fa-th fa-lg"></i><span>CÃ¡talogo Producto</span></a>
+    <a href="#"><i class="fa fa-th fa-lg"></i><span>Cátalogo Producto</span></a>
     <ul class="dropdown-menu">
       <li><a href="#/producto-registrar">Crear</a></li>
       <li><a href="icons.html">Listar</a></li>
