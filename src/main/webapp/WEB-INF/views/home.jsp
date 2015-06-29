@@ -11,6 +11,7 @@
     <!--Template-->
     <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <link rel="stylesheet" href="resources/css/app.css">
     <link rel="stylesheet" href="resources/first/src/css/bootstrap.css">
     <link rel="stylesheet" href="resources/first/src/css/font-awesome.min.css">
     <link rel="stylesheet" href="resources/first/src/js/select2/select2.css">
@@ -62,6 +63,7 @@
 
 <body ng-controller="MainController">
         <!-- header -->
+        <header class="header-banner"></header>
         <header id="header" class="navbar">
             <ul class="nav navbar-nav navbar-avatar pull-right">
                 <li class="dropdown">
@@ -80,11 +82,10 @@
                     </ul>
                 </li>
             </ul>
-            <a class="navbar-brand" href="">Catering</a>
+            <a class="navbar-brand" href="">Catering Service App</a>
             <button type="button" class="btn btn-link pull-left nav-toggle visible-xs" data-toggle="class:slide-nav slide-nav-left" data-target="body">
                 <i class="fa fa-bars fa-lg text-default"></i>
             </button>
-            <img src="resources/first/src/images/banner2.jpg" alt="Catering" class="imgbanner" >
         </header>
         <!-- / header -->
 
