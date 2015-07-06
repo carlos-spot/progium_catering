@@ -1,5 +1,6 @@
 package com.progium.catering.controllers;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +20,13 @@ import org.springframework.web.multipart.MultipartFile;
 import com.progium.catering.contracts.TipoResponse;
 import com.progium.catering.contracts.UsuarioResponse;
 import com.progium.catering.contracts.UsuarioRequest;
+import com.progium.catering.ejb.Tipo;
 import com.progium.catering.ejb.Usuario;
 import com.progium.catering.pojo.UsuarioPOJO;
+import com.progium.catering.services.GeneralServiceInterface;
+import com.progium.catering.services.UsuarioServiceInterface;
+import com.progium.catering.utils.GeneradorContrasennaUtil;
+import com.progium.catering.utils.Utils;
 
 
 /**
@@ -30,28 +36,52 @@ import com.progium.catering.pojo.UsuarioPOJO;
 @RequestMapping(value ="rest/protected/usuario")
 public class UsuarioController {
 
+	@Autowired
+	UsuarioServiceInterface usuarioService;
+	
+	@Autowired
+	GeneralServiceInterface generalService;
+	
+	@Autowired
+	ServletContext servletContext;
+	
 	public UsuarioController() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@RequestMapping(value ="/registrar", method = RequestMethod.POST)
-	public UsuarioResponse registrar(@RequestBody UsuarioRequest ur){	
-		
+	@Transactional
+	public UsuarioResponse registrar(
+			@RequestParam("file") MultipartFile file,
+			@RequestParam("nombre") String nombre,
+			@RequestParam("apellido1") String apellido1,
+			@RequestParam("apellido2") String apellido2,
+			@RequestParam("correo") String correo,
+			@RequestParam("telefono1") String telefono1,
+			@RequestParam("telefono2") String telefono2,
+			@RequestParam("tipoUsuarioId") int tipoUsuarioId,
+			@RequestParam("contrasenna") String contrasenna) throws NoSuchAlgorithmException{	
+			
 		UsuarioResponse us = new UsuarioResponse();
-		/*TipoUsuario tp = generalService.getTipoUsuarioById(ur.getUser().getIdTipoUsuario());
+		Tipo objTipo = generalService.getTipoById(tipoUsuarioId);
+		String resultFileName = Utils.writeToFile(file,servletContext);
 		
-		Usuario user = new Usuario();
-		user.setFirstname(ur.getUser().getFirstname());
-		user.setLastname(ur.getUser().getLastname());
-		user.setEmail(ur.getUser().getEmail());
-		user.setPassword("resetPasswordTodo");
-		user.setTipoUsuario(tp);
+		Usuario objNuevoUsuario = new Usuario();
+		objNuevoUsuario.setNombre(nombre);
+		objNuevoUsuario.setApellido1(apellido1);
+		objNuevoUsuario.setApellido2(apellido2);
+		objNuevoUsuario.setCorreo(correo);
+		objNuevoUsuario.setTelefono1(telefono1);
+		objNuevoUsuario.setTelefono2(telefono2);
+		objNuevoUsuario.setTipo(objTipo);
+		objNuevoUsuario.setFotografia(resultFileName);
+		objNuevoUsuario.setContrasenna(GeneradorContrasennaUtil.encriptarContrasenna(contrasenna));
 		
-		Boolean state = usersService.saveUser(user);
+		Boolean state = usuarioService.saveUsuario(objNuevoUsuario);
 		if(state){
 			us.setCode(200);
 			us.setCodeMessage("user created succesfully");
-		}*/
-		return null;
+		}
+		return us;
 	}
 }

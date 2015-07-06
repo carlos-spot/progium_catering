@@ -2,7 +2,7 @@
 
 var PrototipoProgium = {};
 var _ScopeContainer = {};
-var App = angular.module('PrototipoProgium', ['PrototipoProgium.services', 'ngRoute', 'angularFileUpload']);
+var App = angular.module('PrototipoProgium', ['PrototipoProgium.services', 'ngRoute', 'angular-md5', 'angularFileUpload']);
 
 App.controller('MainController', function($scope, $route, $routeParams, $location) {
      $scope.esAdministrador = true;

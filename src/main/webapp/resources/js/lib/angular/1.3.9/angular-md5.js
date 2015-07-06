@@ -1,6 +1,6 @@
 /*
   angular-md5 - v0.1.7 
-  2014-01-20
+  2015-07-03
 */
 (function(window, angular, undefined) {
   angular.module("angular-md5", [ "gdi2290.md5" ]);
