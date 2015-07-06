@@ -25,35 +25,7 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'modulos/seguridad-usuario-admin',
 			controller: 'UsuarioModificarController'
 		})
-		.when('/catering-registrar', {
-			templateUrl: 'modulos/catering-registrar',
-			controller: 'CateringRegistrarController'
-		})
-		.when('/catering-buscar', {
-			templateUrl: 'modulos/catering-buscar',
-			controller: 'CateringBuscarController'
-		})
-		.when('/producto-registrar', {
-			templateUrl: 'modulos/producto-registrar',
-			controller: 'ProductoRegistrarController'
-		})
-		.when('/cotizacion-registrar', {
-			templateUrl: 'modulos/cotizacion-registrar',
-			controller: 'CotizacionRegistrarController'
-		})
-		.when('/subasta-registrar', {
-			templateUrl: 'modulos/subasta-registrar',
-			controller: 'SubastaRegistrarController'
-		})
-		.when('/subasta-listar', {
-			templateUrl: 'modulos/subasta-listar',
-			controller: 'SubastaListarController'
-		})
-		.when('/no-encontrado', {
-			templateUrl: 'modulos/no-encontrado',
-			controller: 'CompartidoController'
-		})
 		.otherwise({
-        	redirectTo: '/no-encontrado'
+        	redirectTo: '/iniciar-sesion'
 		});
 });

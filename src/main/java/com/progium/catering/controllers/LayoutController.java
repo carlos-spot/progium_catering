@@ -36,7 +36,12 @@ public class LayoutController {
 	{
 		return "modulos/compartido/menuCliente";
 	}
-	
+
+	@RequestMapping(value = "/no-encontrado")
+	public String getNoEncontrado()
+	{
+		return "modulos/compartido/noEncontrado";
+	}
 	//-------------------------------------------------------
 	//Cotizacion
 	//-------------------------------------------------------
@@ -64,15 +69,25 @@ public class LayoutController {
 		return "modulos/seguridad/inicioSesion";
 	}
 	
-	@RequestMapping(value = "/seguridad-usuario-registrar")
-	public String getSeguridadUsuarioRegistrar()
+	@RequestMapping(value = "/seguridad-usuario-admin")
+	public String getSeguridadUsuarioAdmin()
 	{
-		return "modulos/seguridad/usuarioRegistrar";
+		return "modulos/seguridad/usuarioAdmin";
 	}
 	
-	@RequestMapping(value = "/seguridad-usuario-registrar2")
-	public String getSeguridadUsuarioRegistrar2()
+	
+	//-------------------------------------------------------
+	//Subasta
+	//-------------------------------------------------------
+	@RequestMapping(value = "/subasta-registrar")
+	public String getSubastaRegistrar()
 	{
-		return "modulos/seguridad/usuarioRegistrar2";
+		return "modulos/subasta/subastaRegistrar";
+	}
+	
+	@RequestMapping(value = "/subasta-listar")
+	public String getSubastaListar()
+	{
+		return "modulos/subasta/subastaListar";
 	}
 }
