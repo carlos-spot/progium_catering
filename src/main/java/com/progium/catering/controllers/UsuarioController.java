@@ -30,6 +30,9 @@ import com.progium.catering.pojo.UsuarioPOJO;
 @RequestMapping(value ="rest/protected/usuario")
 public class UsuarioController {
 
+//	@Autowired
+//	GeneralServiceInterface generalService;
+	
 	public UsuarioController() {
 		// TODO Auto-generated constructor stub
 	}
